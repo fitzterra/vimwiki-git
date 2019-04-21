@@ -9,7 +9,7 @@ Vimwiki dir in a git repo
 4. [Sample vimwiki config](#sample-vimwiki-config)
 
 If you use [vim][] as your general editor, then [vimwiki][] could be a great
-personal, or even public wiki tools for you.
+personal, or even public wiki tool for you.
 
 Although [vimwiki][] is great to use on a single machine, it would be better to
 have your wiki available on any machine or environment you work on. This is not
@@ -26,8 +26,7 @@ General Flow
 
 1. Initialize a git repo inside your `~/vimwiki` directory, and add some remote
    that you have acces to from other machines like a a Gitub, GitLab,
-   Bitbucket, etc. repo. To do the first commit and push, you can add a
-   `.gitignore` to ignore all vim swap files.
+   Bitbucket, etc. repo.
 2. Whenever the main wiki index file is opened with [vimwiki][], we want to
    automatically do a `git pull` in the wiki directory to ensure we have the
    latest content from the remote. Opening the main index file will always take
@@ -46,7 +45,7 @@ Current limitations and specific
 I'm not very familiar with `vimscript` so for now this plugin is fairly much
 hardcoded for my environment, specifically:
 * I use vimwiki's `markdown` format for my wiki files, and specifically, I link
-  mt wiki to a GitLab wiki repo, similar to what [Manuel Dewald][] describes on
+  my wiki to a GitLab wiki repo, similar to what [Manuel Dewald][] describes on
   his page. This gives me the best of both world as far being able to use
   markdown, and also having my wiki directly abvailable and editable as both a
   GitLab and local vim wiki.  
@@ -56,7 +55,7 @@ hardcoded for my environment, specifically:
 * My wiki dir is the default `~/vimwiki` and this is also harcoded in the plugin.
 
 Since both the vimwiki index name and installation dir is avaialble from the
-vim wiki config, this plugin should in theory be able to pick it up from there
+`vimwiki` config, this plugin should in theory be able to pick it up from there
 without having to hardcode these values. Unfortunately, my knowledge of is
 vimscript does not yet cover how to do this. Please feel free to send me a PR
 with these changes if you know how to do it.
@@ -66,7 +65,7 @@ Installation and setup
 1. Make sure you have [vimwiki][] installed using your [favourite][pg] vim
    plugin manager.
 2. Configure vimwiki as per the docs. See my sample
-   [vimwiki config][#sample-vimwiki-config] for ideas.
+   [vimwiki config](#sample-vimwiki-config) for ideas.
 3. Manually create your `vimwiki` base dir as per your vimwiki setup.
 4. Initialize a git repo in this dir, add a remote and make sure you can
    push/pull to the remote. As a simple test, add a `.gitignore` to ignore any
